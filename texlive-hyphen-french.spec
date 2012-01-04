@@ -44,14 +44,14 @@ Hyphenation patterns for French in T1/EC and UTF-8 encodings.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-french <<EOF
-%% from hyphen-french:
+\%\% from hyphen-french:
 french loadhyph-fr.tex
 =patois
 =francais
 EOF
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-french <<EOF
-%% from hyphen-french:
+\%\% from hyphen-french:
 \addlanguage{french}{loadhyph-fr.tex}{}{2}{3}
 \addlanguage{patois}{loadhyph-fr.tex}{}{2}{3}
 \addlanguage{francais}{loadhyph-fr.tex}{}{2}{3}
