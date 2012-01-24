@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-hyphen-french
-Version:	20111103
-Release:	2
+Version:	20120124
+Release:	1
 Summary:	French hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -44,18 +44,20 @@ Hyphenation patterns for French in T1/EC and UTF-8 encodings.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-french <<EOF
-\%\% from hyphen-french:
+\%% from hyphen-french:
 french loadhyph-fr.tex
 =patois
 =francais
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_dat_d}/hyphen-french
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-french <<EOF
-\%\% from hyphen-french:
+\%% from hyphen-french:
 \addlanguage{french}{loadhyph-fr.tex}{}{2}{3}
 \addlanguage{patois}{loadhyph-fr.tex}{}{2}{3}
 \addlanguage{francais}{loadhyph-fr.tex}{}{2}{3}
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_def_d}/hyphen-french
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
 cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-french <<EOF
 -- from hyphen-french:
