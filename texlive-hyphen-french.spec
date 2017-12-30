@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-hyphen-french
-Version:	20120611
-Release:	9
+Version:	20170414
+Release:	1
 Summary:	French hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
