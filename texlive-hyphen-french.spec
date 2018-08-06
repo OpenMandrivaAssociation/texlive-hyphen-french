@@ -70,25 +70,3 @@ cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-french <<EOF
 		hyphenation = '',
 	},
 EOF
-
-
-%changelog
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120611-1
-+ Revision: 804737
-- Update to latest release.
-
-* Tue Jan 24 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120124-1
-+ Revision: 767543
-- Add workaround to rpm bug that broke hyphenation files
-
-* Wed Jan 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111103-2
-+ Revision: 759913
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111103-1
-+ Revision: 718655
-- texlive-hyphen-french
-- texlive-hyphen-french
-- texlive-hyphen-french
-- texlive-hyphen-french
-
